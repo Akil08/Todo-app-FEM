@@ -297,10 +297,28 @@ img.cross{
 
 
 
+@media(max-width:380px) {
+
+   input{
+       width: 82%;
+   }
+   .hr{
+       width: 120%;
+   }
+
+}
 
 
+@media(max-width:420px) {
 
-
+    input{
+        width: 84%;
+    }
+    .hr{
+        width: 117%;
+    }
+ 
+ }
 
 
 

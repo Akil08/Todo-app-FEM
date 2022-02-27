@@ -166,17 +166,21 @@ dupPage[2].addEventListener("click",function(){
 
 
 clear.addEventListener("click",function(){
+    var x = ul.children.length;
 
-   while(ul.children.length!=0){
+   while( totalList!= 0 ){
 
     for(var i=0; i<ul.children.length; i++){
        
         if(ul.children[i].classList.contains("done-todo")){
             totalList--;
+            // x--;
+            // if( x === 0) break;
             ul.removeChild(ul.children[i]);
+            // if( x === 0) break;/
         }
     }
-
+    
    } 
 
 })
