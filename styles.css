@@ -2,7 +2,7 @@
 
 :root{   
 --Bright-Blue: hsl(220, 98%, 61%);
---Check-Background: linear-gradient ( hsl(192, 100%, 67%) , hsl(280, 87%, 65%) );
+--Check-Background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 --Very-Light-Gray: hsl(0, 0%, 98%);
 --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
 --Light-Grayish-Blue: hsl(233, 11%, 84%);
@@ -72,7 +72,7 @@ p{
 input{
     background-color: var(--Very-Dark-Desaturated-Blue);
     color: aliceblue;
-    width: 0%;
+    width: 89%;
     height:70px;
     border: none;
     border-radius: 8px;
@@ -158,11 +158,10 @@ img.cross{
 .display{
     opacity: 0.5;
     text-decoration-color: var(--Dark-Grayish-Blue) !important;
-    /* text-decoration-color: red !important; */
     text-decoration: line-through;
 }
 .check{
-    background-image: url("images/icon-check.svg");
+    background-image: url("images/icon-check.svg"), var(--Check-Background);
     background-color:  var(--Check-Background);
     background-position: center;
     background-repeat: no-repeat;
