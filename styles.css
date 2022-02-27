@@ -105,7 +105,7 @@ input:focus::placeholder {
 li{
     padding-top:10px; 
     list-style: none;
-    padding-right: 50px ;
+    padding-right: 30px ;
 }
 .content{
     margin: 20px 0;
@@ -211,6 +211,15 @@ img.cross{
 }
 .done-todo{
     font-weight: 400;
+}
+
+/* footer */
+footer{
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
 
