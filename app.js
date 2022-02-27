@@ -5,7 +5,6 @@ var todoItems = document.querySelector(".todo-items");
 var leftItems = document.querySelector(".left-items");
 var checkedCircle = document.getElementsByClassName("c");
 var checkedCircleCount = checkedCircle.length;
-// var ul = document.querySelector("ul");
 var ul = document.getElementById("ul");
 var clear = document.querySelector(".clear-completed");
 var toggle = document.querySelector(".heading img")
@@ -54,7 +53,8 @@ ul.addEventListener("click",function(e){
     if(e.target.classList.contains("c") && e.target.parentNode.classList.contains("display") ) {
         e.target.parentNode.parentNode.parentNode.classList.remove("done-todo")
         e.target.parentNode.classList.remove("display");
-        e.target.classList.remove("check")
+        e.target.classList.remove("check");
+        totalList--;
         checkedCircleCount++;
         leftItems.innerHTML = checkedCircleCount;
     }
@@ -68,11 +68,11 @@ ul.addEventListener("click",function(e){
         // console.log(e.target.parentNode.textContent);
     } 
     else if(e.target.tagName === "IMG" ){ 
-        totalList--;
         if(!e.target.parentNode.parentNode.classList.contains("done-todo")){
             checkedCircleCount--;
             leftItems.innerHTML = checkedCircleCount;
         }
+        totalList--;
         ul.removeChild(e.target.parentNode.parentNode)
     }
 })
@@ -166,23 +166,20 @@ dupPage[2].addEventListener("click",function(){
 
 
 clear.addEventListener("click",function(){
-    var x = ul.children.length;
 
-   while( totalList!= 0 ){
+    // if( totalList != 0 ) {
+    // console.log("ahh")
+   while( totalList > 0 ){
 
     for(var i=0; i<ul.children.length; i++){
        
         if(ul.children[i].classList.contains("done-todo")){
             totalList--;
-            // x--;
-            // if( x === 0) break;
             ul.removeChild(ul.children[i]);
-            // if( x === 0) break;/
         }
     }
-    
    } 
-
+//  }
 })
 
 toggle.addEventListener("click",function(){
